@@ -1,11 +1,18 @@
 (function(exports) {
 
   function noteListViewTests() {
-    var mockModel = {}
-    var noteListView = new NoteListView(mockModel);
 
-    assert.isTrue((noteListView.noteList) === mockModel, 'noteListView takes an object on instantiation');
+    var testNoteList = new NoteList();
+    testNoteList.createNote("Test");
+    testNoteList.createNote("Test2")
+    var noteListView = new NoteListView(testNoteList);
 
+    assert.isTrue((noteListView.noteList) === testNoteList, 'noteListView takes an object on instantiation');
+
+    console.log(testNoteList);
+    console.log(testNoteList.notesReturn())
+
+    assert.isTrue(noteListView.displayHTML() === "<ul><li>Test</li><li>Test2</li></ul>", "noteListView.displayHTML() return a HTML string of all note texts")
 
   };
 

@@ -18,3 +18,5 @@
   noteListTests();
 
 })(this);
+
+mockModel = {}
