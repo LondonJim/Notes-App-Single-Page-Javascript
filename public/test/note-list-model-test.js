@@ -1,22 +1,29 @@
 (function(exports) {
 
-  function noteListModelTests() {
-    var noteListModel = new NoteListModel();
+  function noteListTests() {
+    var noteList = new NoteList();
 
-    if ((noteListModel.notes).length != 0 ) {
-      throw new Error('No array is instantiated')
-    } else {
-        console.log('Instantiates with an array')
-    }
+    if ((noteList.notes).length !== 0 ) {
+      throw new Error('FAIL: No array is instantiated')
+    } else { console.log('PASSES: Instantiates with an array') }
 
-    if ((noteListModel.notesReturn()).length != 0 ) {
-      throw new Error('Array is not returned')
-    } else {
-        console.log('notesReturn() returns array')
-    }
+    if ((noteList.notesReturn()).length !== 0 ) {
+      throw new Error('FAIL: Array is not returned')
+    } else { console.log('PASSES: .notesReturn() returns array') }
+
+    if(noteList.createNote("test note").text !== "test note") {
+      throw new Error('FAIL: New note object is not returned')
+    } else { console.log('PASSES: .createNote() returns a Note object')}
+
+    if(noteList.notesReturn().length !== 1) {
+      throw new Error('FAIL: New object is not pushed into notes')
+    } else { console.log('PASSES: .createNote() passes object into notes')}
+
+    // access element 1 of array
+    // check contents - text to match
 
   };
 
-  noteListModelTests();
+  noteListTests();
 
 })(this);
