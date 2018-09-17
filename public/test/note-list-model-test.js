@@ -19,8 +19,9 @@
       throw new Error('FAIL: New object is not pushed into notes')
     } else { console.log('PASSES: .createNote() passes object into notes')}
 
-    // access element 1 of array
-    // check contents - text to match
+    if(noteList.notes[0].text != "test note") {
+      throw new Error('FAIL: new Note object not in notes')
+    } else { console.log('PASSES: .createNote() passes Note object into notes')}
 
   };
 
