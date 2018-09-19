@@ -1,10 +1,11 @@
 (function(exports) {
-  function NoteListView(noteList) {
-    this.noteList = noteList
+  function NoteListView() {
+    this.notesInArray = ""
   };
 
-  NoteListView.prototype.displayHTML = function() {
-    var noteArray = this.noteList.notesReturn() // array of note objects
+  NoteListView.prototype.displayHTML = function(noteList) {
+    this.notesInArray = noteList
+    var noteArray = this.notesInArray.notesReturn() // array of note objects
     var textArray = noteArray.map(note => note.text);
     return "<ul><li>" + textArray.join('</li><li>') + "</li></ul>"
   }

@@ -12,31 +12,31 @@ Tags: JavaScript (only!)
 OOP principles were used when designing the app:
 
 ```
- 
+
 ╔════════════╗  
-║            ║ 
-║  Browser   ║ User enters new note     
+║            ║
+║  Client    ║ User enters new note     
 ║            ║
 ╚════════════╝
-
- 
+      |
+      |
 ╔════════════╗  
-║            ║ 
-║Controller? ║ Talks to our model? (Does not yet exist)     
+║            ║ Makes changes to the document (to display notes)
+║ Controller ║ Talks to our model   
 ║            ║
 ╚════════════╝    
-      
-      
-      
-      
-						╔════════════╗
-						║  Note List ║
-						║    View    ║ Creates an HTML string for all note texts
-						║            ║ 
-						╚════════════╝
-  
-      
-        
+      |      |
+      |      |
+      |      |
+      |      |
+	  |	╔════════════╗
+  	|	║  Note List ║
+  	|	║    View    ║ Creates an HTML string for all note texts
+	  |	║            ║
+	  |	╚════════════╝
+      |
+      |
+      |
 ╔════════════╗   
 ║            ║ Returns all Note objects   
 ║    Note    ║ Creates a new Note object and pushes it to a list of all notes
@@ -50,6 +50,6 @@ OOP principles were used when designing the app:
       |--------------------║    Note    ║ Returns the note text
                            ║            ║
                            ╚════════════╝
-       
-                         
+
+
 ```

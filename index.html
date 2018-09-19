@@ -3,19 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Note App</title>
-    <script src="public/src/note-list-model.js"></script>
-    <script src="public/src/note-list-view.js"></script>
-    <script src="public/src/note-model.js"></script>
-    <script src="public/src/note-controller.js"></script>
-
-    <script src="public/test/lib/assert.js"></script>
-    <script src="public/test/note-test.js"></script>
-    <script src="public/test/note-list-model-test.js"></script>
-    <script src="public/test/note-list-view-test.js"></script>
+    <script src="public/src/note-list-model.js" defer></script>
+    <script src="public/src/note-list-view.js" defer></script>
+    <script src="public/src/note-model.js" defer></script>
+    <script src="public/src/note-controller.js" defer></script>
+    <!-- tests -->
+    <script src="public/test/lib/assert.js" defer></script>
+    <script src="public/test/note-test.js" defer></script>
+    <script src="public/test/note-list-model-test.js" defer></script>
+    <script src="public/test/note-list-view-test.js" defer></script>
+    <script src="public/test/note-controller-test.js" defer></script>
   </head>
   <body>
     <div id="app">hello</div>
-    <script> noteController = new NoteController </script>
-    <script> noteController.displayNotes() </script>
   </body>
 </html>
