@@ -5,8 +5,8 @@
     this.noteListView = noteListView;
   };
 
-  NoteController.prototype.displayNotes = function() {
-      document.getElementById("app").innerHTML = this.noteListView.displayHTML(this.noteList);
+  NoteController.prototype.displayNotes = function(noteList = this.noteList) {
+      document.getElementById("app").innerHTML = this.noteListView.displayHTML(noteList);
   };
 
   NoteController.prototype.createNote = function(note) {

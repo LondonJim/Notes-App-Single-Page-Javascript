@@ -7,7 +7,7 @@
     testNoteList.createNote("Test2")
     var noteListView = new NoteListView();
 
-    assert.isTrue(noteListView.displayHTML(testNoteList) === "<ul><li>Test</li><li>Test2</li></ul>", "noteListView.displayHTML() return a HTML string of all note texts")
+    assert.isTrue(noteListView.displayHTML(testNoteList) === "<ul><li><div>Test</div></li><li><div>Test2</div></li></ul>", "noteListView.displayHTML() return a HTML string of all note texts")
 
   };
 
