@@ -4,7 +4,7 @@ function Assert() {};
     if (firstElement != secondElement) {
       console.error(Error("Assertion failed: " + firstElement + " does not equal " + secondElement + ". " + description));
     } else {
-      console.log("%cAssertion Passed: " + firstElement + " equals " + secondElement + ".  " + description, 'color: green');
+      console.log("%cAssertion Passed: " + description, 'color: green');
     }
   }
 
@@ -12,7 +12,7 @@ function Assert() {};
     if (!assertionToCheck) {
       console.error(Error("Assertion failed: " + assertionToCheck + " is not truthy. " + description));
     } else {
-      console.log("%cAssertion Passed: " + assertionToCheck + ". " + description, 'color: green');
+      console.log("%cAssertion Passed: " + description, 'color: green');
     }
   }
 
@@ -20,7 +20,7 @@ function Assert() {};
     if (firstElement.includes(secondElement)) {
       console.error(Error("Assertion failed: " + firstElement + " contains " + secondElement + ". " + description));
     } else {
-      console.log("%cAssertion Passed: " + firstElement + " contains " + secondElement + ". " + description, 'color: green');
+      console.log("%cAssertion Passed: " + description, 'color: green');
     }
   }
 
