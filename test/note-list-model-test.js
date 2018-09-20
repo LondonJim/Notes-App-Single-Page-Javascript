@@ -3,15 +3,15 @@
   function noteListTests() {
     var noteList = new NoteList();
 
-    assert.isTrue((noteList.notes).length === 0, 'noteList Instantiates with an array');
+    assert.equals((noteList.notes).length, 0, 'noteList Instantiates with an array containing 0 elements');
 
-    assert.isTrue((noteList.notesReturn()).length === 0, 'noteList returns empty array')
+    assert.equals((noteList.notesReturn()).length, 0, 'noteList returns empty array')
 
-    assert.isTrue(noteList.createNote("test note").text === "test note", 'noteList creates a note')
+    assert.equals(noteList.createNote("test note").text, 'test note', "noteList creates a note equals to 'test note'")
 
-    assert.isTrue(noteList.notesReturn().length === 1, 'noteList adds object to array')
+    assert.equals(noteList.notesReturn().length, 1, 'noteList adds object to array, array contains 1 element')
 
-    assert.isTrue(noteList.notes[0].text === "test note", 'noteList adds new note to array')
+    assert.equals(noteList.notes[0].text, 'test note', "noteList adds new note to array that equals 'test note'")
 
   };
 

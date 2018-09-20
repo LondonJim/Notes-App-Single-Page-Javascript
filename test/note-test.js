@@ -3,7 +3,7 @@
   function testNoteInstantiation() {
     var note = new Note("Test note");
 
-    assert.isTrue(note.textReturn() === "Test note", 'note instantiates with note text')
+    assert.equals(note.textReturn(), "Test note", 'note instantiates with note text')
 
   };
 

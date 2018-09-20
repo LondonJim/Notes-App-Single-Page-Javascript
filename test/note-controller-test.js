@@ -7,7 +7,7 @@
     noteController.createNote("Note Test")
     noteController.displayNotes(mockNoteList.note)
 
-    assert.isTrue(document.getElementById("app").innerHTML === "Note Test", 'noteController returns note HTML formatted');
+    assert.equals((document.getElementById("app").innerHTML), "Note Test", 'noteController returns note equal to note created');
   };
 
   noteController();
