@@ -9,7 +9,7 @@
   };
 
   Note.prototype.indexReturn = function() {
-    return this.index;
+    return this.id;
   };
 
   exports.Note = Note;

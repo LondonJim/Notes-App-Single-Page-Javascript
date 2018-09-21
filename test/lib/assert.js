@@ -1,22 +1,22 @@
-function Assert() {};
+var assert = {
 
-  Assert.prototype.equals = function(firstElement, secondElement, description) {
+  equals: function(firstElement, secondElement, description) {
     if (firstElement != secondElement) {
       console.error(Error("Assertion failed: " + firstElement + " does not equal " + secondElement + ". " + description));
     } else {
       console.log("%cAssertion Passed: " + description, 'color: green');
     }
-  }
+  },
 
-  Assert.prototype.isTrue = function(assertionToCheck, description) {
+  isTrue: function(assertionToCheck, description) {
     if (!assertionToCheck) {
       console.error(Error("Assertion failed: " + assertionToCheck + " is not truthy. " + description));
     } else {
       console.log("%cAssertion Passed: " + description, 'color: green');
     }
-  }
+  },
 
-  Assert.prototype.includes = function(firstElement, secondElement, description) {
+  include: function(firstElement, secondElement, description) {
     if (firstElement.includes(secondElement)) {
       console.error(Error("Assertion failed: " + firstElement + " contains " + secondElement + ". " + description));
     } else {
@@ -24,4 +24,4 @@ function Assert() {};
     }
   }
 
-assert = new Assert();
+};

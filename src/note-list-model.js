@@ -1,7 +1,7 @@
 (function(exports) {
   function NoteList() {
     this.notes = [];
-    noteId = 0;
+    this.noteId = 0;
   };
 
   NoteList.prototype.notesReturn = function() {
@@ -9,9 +9,9 @@
   };
 
   NoteList.prototype.createNote = function(text) {
-    var note = new Note(text, noteId);
+    var note = new Note(text, this.noteId);
     this.notes.push(note);
-    noteId++
+    this.noteId++
     return note;
   };
 
